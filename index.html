@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Multiplication Table</title>
+</head>
+
+<body>
+    <div id="main">
+        <table>
+            <tbody>
+                <tr>
+                    <th></th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                </tr>
+                <tr id="row1">
+                    <td>1</td>
+                </tr>
+                <tr id="row2">
+                    <td>2</td>
+                </tr>
+                <tr id="row3">
+                    <td>3</td>
+                </tr>
+                <tr id="row4">
+                    <td>4</td>
+                </tr>
+                <tr id="row5">
+                    <td>5</td>
+                </tr>
+                <tr id="row6">
+                    <td>6</td>
+                </tr>
+                <tr id="row7">
+                    <td>7</td>
+                </tr>
+                <tr id="row8">
+                    <td>8</td>
+                </tr>
+                <tr id="row9">
+                    <td>9</td>
+                </tr>
+                <tr id="row10">
+                    <td>10</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript">
+        
+        for (let p = 1; p <= 10; p++) {
+            for (let i = 1; i <= 10; i++) {
+                var newCell = document.createElement("td");
+                var newText = document.createTextNode(i * p);
+                var addToTable = document.getElementById("row" + p);
+
+                newCell.appendChild(newText);
+                addToTable.appendChild(newCell);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
